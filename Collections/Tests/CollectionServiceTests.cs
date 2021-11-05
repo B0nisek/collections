@@ -26,7 +26,7 @@ namespace Tests
             var result = this.collectionService.GetAllNames();
 
             Assert.NotEmpty(result);
-            Assert.Equal(11, result.Count);
+            Assert.Equal(11, result.Count());
             Assert.Equal("Lil Slut", result.First());
             Assert.Equal("Wojak", result.Last());
         }
@@ -37,7 +37,7 @@ namespace Tests
             var result = this.collectionService.GetAllNamesNoDuplicates();
 
             Assert.NotEmpty(result);
-            Assert.Equal(10, result.Count);
+            Assert.Equal(10, result.Count());
             Assert.Equal("Lil Slut", result.First());
             Assert.Equal("Big Retard", result.Last());
         }
@@ -48,7 +48,7 @@ namespace Tests
             var result = this.collectionService.GetPeopleEligibleToDrive();
 
             Assert.NotEmpty(result);
-            Assert.Equal(6, result.Count);
+            Assert.Equal(6, result.Count());
             Assert.Equal("Slut", result.First().Name);
             Assert.Equal("Retard", result.Last().Name);
         }
@@ -59,7 +59,7 @@ namespace Tests
             var result = this.collectionService.GetPeopleOrderedByAge();
 
             Assert.NotEmpty(result);
-            Assert.Equal(11, result.Count);
+            Assert.Equal(11, result.Count());
             Assert.Equal("Wojak", result.First().Name);
             Assert.Equal(11, result.First().Age);
             Assert.Equal("Dirty Slut", result.Last().Name);
@@ -72,7 +72,7 @@ namespace Tests
             var result = this.collectionService.GetPeopleWithInvalidEmails();
 
             Assert.NotEmpty(result);
-            Assert.Equal(3, result.Count);
+            Assert.Equal(3, result.Count());
         }
 
         [Fact]
@@ -81,7 +81,7 @@ namespace Tests
             var result = this.collectionService.GetPeopleWithFuckYouEmailProvider();
 
             Assert.NotEmpty(result);
-            Assert.Equal(5, result.Count);
+            Assert.Equal(5, result.Count());
         }
 
         [Fact]
@@ -90,7 +90,7 @@ namespace Tests
             var result = this.collectionService.GetAllSluts();
 
             Assert.NotEmpty(result);
-            Assert.Equal(4, result.Count);
+            Assert.Equal(4, result.Count());
 
             foreach (var person in result)
             {
@@ -104,7 +104,7 @@ namespace Tests
             var result = this.collectionService.GetSlutsPhoneNumbers();
 
             Assert.NotEmpty(result);
-            Assert.Equal(4, result.Count);
+            Assert.Equal(4, result.Count());
         }
 
         [Fact]
@@ -113,7 +113,7 @@ namespace Tests
             var result = this.collectionService.GetAllSlutsFromMenchester();
 
             Assert.NotEmpty(result);
-            Assert.Equal(3, result.Count);
+            Assert.Equal(3, result.Count());
 
             foreach (var person in result)
             {

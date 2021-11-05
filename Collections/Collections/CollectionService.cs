@@ -17,47 +17,47 @@ namespace Collections
             throw new NotImplementedException();
         }
 
-        public List<string> GetAllNames()
+        public IEnumerable<string> GetAllNames()
         {
             throw new NotImplementedException();
         }
 
-        public List<string> GetAllNamesNoDuplicates()
+        public IEnumerable<string> GetAllNamesNoDuplicates()
         {
             throw new NotImplementedException();
         }
 
-        public List<Person> GetPeopleEligibleToDrive()
+        public IEnumerable<Person> GetPeopleEligibleToDrive()
         {
             throw new NotImplementedException();
         }
 
-        public List<Person> GetPeopleOrderedByAge()
+        public IEnumerable<Person> GetPeopleOrderedByAge()
         {
             throw new NotImplementedException();
         }
 
-        public List<Person> GetPeopleWithInvalidEmails()
+        public IEnumerable<Person> GetPeopleWithInvalidEmails()
         {
             throw new NotImplementedException();
         }
 
-        public List<Person> GetPeopleWithFuckYouEmailProvider()
+        public IEnumerable<Person> GetPeopleWithFuckYouEmailProvider()
         {
             throw new NotImplementedException();
         }
 
-        public List<Person> GetAllSluts()
+        public IEnumerable<Person> GetAllSluts()
         {
             throw new NotImplementedException();
         }
 
-        public List<string> GetSlutsPhoneNumbers()
+        public IEnumerable<string> GetSlutsPhoneNumbers()
         {
             throw new NotImplementedException();
         }
 
-        public List<Person> GetAllSlutsFromMenchester()
+        public IEnumerable<Person> GetAllSlutsFromMenchester()
         {
             throw new NotImplementedException();
         }
