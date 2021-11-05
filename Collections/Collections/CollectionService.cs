@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Collections
 {
@@ -14,52 +16,52 @@ namespace Collections
 
         public int GetTotalPeopleCount()
         {
-            throw new NotImplementedException();
+            return this.people.Count;
         }
 
         public IEnumerable<string> GetAllNames()
         {
-            throw new NotImplementedException();
+            return this.people.Select(x => x.Name);
         }
 
         public IEnumerable<string> GetAllNamesNoDuplicates()
         {
-            throw new NotImplementedException();
+            return this.GetAllNames().Distinct();
         }
 
         public IEnumerable<Person> GetPeopleEligibleToDrive()
         {
-            throw new NotImplementedException();
+            return this.people.Where(x => x.Age >= 18);
         }
 
         public IEnumerable<Person> GetPeopleOrderedByAge()
         {
-            throw new NotImplementedException();
+            return this.people.OrderBy(x => x.Age);
         }
 
         public IEnumerable<Person> GetPeopleWithInvalidEmails()
         {
-            throw new NotImplementedException();
+            return this.people.Where(x => !Regex.IsMatch(x.Email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase));
         }
 
         public IEnumerable<Person> GetPeopleWithFuckYouEmailProvider()
         {
-            throw new NotImplementedException();
+            return this.people.Where(x => x.Email.EndsWith("fuck.you"));
         }
 
         public IEnumerable<Person> GetAllSluts()
         {
-            throw new NotImplementedException();
+            return this.people.Where(x => x.Name.ToLower().Contains("slut"));
         }
 
         public IEnumerable<string> GetSlutsPhoneNumbers()
         {
-            throw new NotImplementedException();
+            return this.GetAllSluts().Select(x => x.Phone);
         }
 
         public IEnumerable<Person> GetAllSlutsFromMenchester()
         {
-            throw new NotImplementedException();
+            return this.GetAllSluts().Where(x => x.City == "Menchester");
         }
     }
 }
