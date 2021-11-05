@@ -8,6 +8,7 @@ namespace Collections
     public class CollectionService
     {
         private readonly List<Person> people;
+        private const string EmailPattern = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
 
         public CollectionService(List<Person> people)
         {
@@ -41,7 +42,7 @@ namespace Collections
 
         public IEnumerable<Person> GetPeopleWithInvalidEmails()
         {
-            return this.people.Where(x => !Regex.IsMatch(x.Email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase));
+            return this.people.Where(x => !Regex.IsMatch(x.Email, EmailPattern, RegexOptions.IgnoreCase));
         }
 
         public IEnumerable<Person> GetPeopleWithFuckYouEmailProvider()
